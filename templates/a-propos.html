@@ -1,0 +1,198 @@
+{% load static %}<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - SAEADA STORE</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="{% url 'index' %}">SAEADA STORE</a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'index' %}">Accueil</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="{% url 'products_list' %}" role="button" data-bs-toggle="dropdown">
+                          Produits
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'products_list' %}?category=montres">Montres</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products_list' %}?category=accessoires">Accessoires</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="{% url 'about' %}">À propos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                  </li>
+              </ul>
+              
+              <a href="{% url 'cart_view' %}" class="btn cart-btn position-relative ms-auto">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="cart-count">0</span>
+              </a>
+          </div>
+      </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="py-5" style="margin-top: 100px;">
+      <div class="container">
+          <div class="about-intro">
+              <h1 class="display-4 fw-bold mb-4">L'Histoire de SAEADA STORE</h1>
+              <p class="lead text-muted mb-4">Née d'une passion pour l'excellence et le raffinement, SAEADA STORE s'est imposée comme une référence incontournable dans l'univers des montres, chaussures et accessoires de luxe. Notre histoire commence avec une vision simple mais ambitieuse : démocratiser l'accès aux produits de qualité exceptionnelle.</p>
+              <p class="lead text-muted">Depuis notre création, nous avons bâti notre réputation sur des valeurs fondamentales d'authenticité, de qualité et de service client irréprochable. Chaque produit de notre collection est soigneusement sélectionné pour répondre aux attentes les plus exigeantes de notre clientèle.</p>
+          </div>
+
+          <div class="row g-4 mb-5">
+              <div class="col-md-6">
+                  <div class="mission-vision-card">
+                      <h2 class="h4 mb-3"><i class="fas fa-bullseye text-accent me-2"></i> Notre Mission</h2>
+                      <p class="text-muted">Offrir à nos clients une expérience d'achat exceptionnelle en proposant une sélection rigoureuse de produits alliant style, qualité et innovation. Nous nous engageons à accompagner chacun dans l'expression de son style personnel à travers des pièces d'exception.</p>
+                      <p class="text-muted">Notre mission s'étend au-delà de la simple vente : nous créons des liens durables avec nos clients en leur offrant conseils personnalisés et service après-vente de qualité.</p>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="mission-vision-card">
+                      <h2 class="h4 mb-3"><i class="fas fa-eye text-accent me-2"></i> Notre Vision</h2>
+                      <p class="text-muted">Devenir la destination de référence pour tous ceux qui recherchent l'excellence dans l'univers de la mode et des accessoires. Nous aspirons à créer un écosystème où luxe rime avec accessibilité, où chaque client trouve la pièce qui lui correspond parfaitement.</p>
+                      <p class="text-muted">Notre vision s'ancres dans l'innovation constante et l'adaptation aux nouvelles tendances, tout en préservant les codes intemporels de l'élégance.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="values-section mb-5">
+              <h2 class="text-center display-5 fw-bold mb-4">Nos Valeurs Fondamentales</h2>
+              <div class="row g-4">
+                  <div class="col-lg-4 col-md-6">
+                      <div class="value-item">
+                          <i class="fas fa-gem"></i>
+                          <h5 class="h4 mt-3 mb-2">Excellence</h5>
+                          <p class="text-muted">Nous sélectionnons uniquement des produits de la plus haute qualité, issus des meilleures manufactures et ateliers reconnus pour leur savoir-faire exceptionnel.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                      <div class="value-item">
+                          <i class="fas fa-heart"></i>
+                          <h5 class="h4 mt-3 mb-2">Passion</h5>
+                          <p class="text-muted">Notre équipe partage une passion commune pour la beauté, l'artisanat et l'innovation. Cette passion se reflète dans chaque interaction avec nos clients.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                      <div class="value-item">
+                          <i class="fas fa-handshake"></i>
+                          <h5 class="h4 mt-3 mb-2">Confiance</h5>
+                          <p class="text-muted">Nous construisons des relations durables basées sur la transparence, l'honnêteté et le respect mutuel. Votre satisfaction est notre priorité absolue.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                      <div class="value-item">
+                          <i class="fas fa-rocket"></i>
+                          <h5 class="h4 mt-3 mb-2">Innovation</h5>
+                          <p class="text-muted">Nous restons à l'avant-garde des tendances et des technologies pour vous offrir toujours le meilleur de ce que l'industrie peut proposer.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                      <div class="value-item">
+                          <i class="fas fa-globe"></i>
+                          <h5 class="h4 mt-3 mb-2">Accessibilité</h5>
+                          <p class="text-muted">Nous démocratisons l'accès au luxe en proposant des produits d'exception à des prix justes, sans compromis sur la qualité.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                      <div class="value-item">
+                          <i class="fas fa-leaf"></i>
+                          <h5 class="h4 mt-3 mb-2">Responsabilité</h5>
+                          <p class="text-muted">Nous nous engageons dans une démarche éthique et durable, en privilégiant les partenaires qui partagent nos valeurs environnementales.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+      <div class="container">
+          <div class="row text-center g-4">
+              <div class="col-md-3 col-sm-6">
+                  <div class="stat-item">
+                      <h3>1000+</h3>
+                      <p>Clients Satisfaits</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="stat-item">
+                      <h3>500+</h3>
+                      <p>Produits Premium</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="stat-item">
+                      <h3>3+</h3>
+                      <p>Années d'Excellence</p>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="stat-item">
+                      <h3>24/7</h3>
+                      <p>Service Client</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="custom-footer">
+      <div class="container">
+          <div class="row g-4">
+              <div class="col-lg-4">
+                  <div class="footer-brand">SAEADA STORE</div>
+                  <p>SAEADA STORE, votre destination privilégiée pour les montres, chaussures et accessoires de luxe. Excellence et raffinement depuis 2021.</p>
+              </div>
+              <div class="col-lg-4">
+                  <h5>Navigation</h5>
+                  <ul class="list-unstyled">
+                      <li class="mb-2"><a href="{% url 'index' %}">Accueil</a></li>
+                      <li class="mb-2"><a href="{% url 'products_list' %}">Produits</a></li>
+                      <li class="mb-2"><a href="{% url 'about' %}">À propos</a></li>
+                      <li class="mb-2"><a href="{% url 'contact' %}">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-4">
+                  <h5>Contact</h5>
+                  <p><i class="fab fa-whatsapp"></i> +225 07 88 63 58 34</p>
+                  <p><i class="fas fa-envelope"></i> contact@saeadastore.com</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire</p>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; 2024 SAEADA STORE. Tous droits réservés. Créé avec passion.</p>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
