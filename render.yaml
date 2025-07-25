@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: Saeada
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn Saeada.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: Saeada.settings
+      - key: PYTHON_VERSION
+        value: 3.11
